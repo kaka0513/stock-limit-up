@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8">
+<title>績效儀表板 - 台股動能 / 趨勢選股</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body { font-family:-apple-system,"PingFang TC",sans-serif; background:#0f1115; color:#e8e8e8; margin:0; padding:32px; }
+  .wrap { max-width:1100px; margin:0 auto; }
+  h1 { font-size:26px; margin:0 0 8px; }
+  h2 { font-size:18px; margin:32px 0 12px; color:#dde; border-left:3px solid #7cb7ff; padding-left:10px; }
+  .sub { color:#888; font-size:13px; margin-bottom:24px; line-height:1.6; }
+  a.back { color:#7cb7ff; text-decoration:none; font-size:13px; }
+  a.back:hover { text-decoration:underline; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin-bottom:8px; }
+  .card { background:#1a1d24; border-radius:8px; padding:18px 20px; border:1px solid #232730; }
+  .card .lbl { font-size:12px; color:#8a8f9a; margin-bottom:6px; }
+  .card .val { font-size:28px; font-weight:600; font-variant-numeric:tabular-nums; }
+  .card.pos .val { color:#7be07b; }
+  .card.neg .val { color:#ff7878; }
+  .card.blue .val { color:#7cb7ff; }
+  .card .extra { font-size:11px; color:#777; margin-top:4px; }
+  table { border-collapse:collapse; width:100%; background:#1a1d24; border-radius:8px; overflow:hidden; font-size:13px; }
+  th,td { padding:10px 14px; text-align:left; border-bottom:1px solid #2a2e38; }
+  th { background:#22262f; color:#aab; font-weight:600; font-size:12px; }
+  td.num { text-align:right; font-variant-numeric:tabular-nums; }
+  .pos { color:#7be07b; }
+  .neg { color:#ff7878; }
+  .chart { background:#1a1d24; border-radius:8px; padding:18px; border:1px solid #232730; }
+  .footer { margin-top:32px; color:#666; font-size:12px; text-align:center; }
+</style></head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">← 返回首頁</a>
+  <h1 style="margin-top:6px">📊 績效儀表板</h1>
+  <div class="sub">
+    每日 picks 配對隔日收盤價，追蹤策略真實表現。當前樣本 23 筆，僅供參考。
+  </div>
+
+  <h2>總覽</h2>
+  
+<div class='cards'>
+  <div class='card blue'><div class='lbl'>累積樣本</div><div class='val'>23</div><div class='extra'>2026-04-30 ~ 2026-05-04</div></div>
+  <div class='card pos'><div class='lbl'>整體勝率</div><div class='val'>82.6%</div><div class='extra'>19 / 23</div></div>
+  <div class='card pos'><div class='lbl'>平均隔日漲幅</div><div class='val'>+5.70%</div></div>
+  <div class='card pos'><div class='lbl'>漲停命中</div><div class='val'>10</div><div class='extra'>43.5% 命中率</div></div>
+</div>
+
+
+  <h2>依信心度分組勝率</h2>
+  <div class='chart'><svg viewBox="0 0 1000 320" width="100%" style="display:block"><line x1="50" y1="260.0" x2="970" y2="260.0" stroke="#2a2e38" stroke-dasharray="3,3"/><text x="42" y="264.0" fill="#888" font-size="11" text-anchor="end">0%</text><line x1="50" y1="202.5" x2="970" y2="202.5" stroke="#2a2e38" stroke-dasharray="3,3"/><text x="42" y="206.5" fill="#888" font-size="11" text-anchor="end">25%</text><line x1="50" y1="145.0" x2="970" y2="145.0" stroke="#2a2e38" stroke-dasharray="3,3"/><text x="42" y="149.0" fill="#888" font-size="11" text-anchor="end">50%</text><line x1="50" y1="87.5" x2="970" y2="87.5" stroke="#2a2e38" stroke-dasharray="3,3"/><text x="42" y="91.5" fill="#888" font-size="11" text-anchor="end">75%</text><line x1="50" y1="30.0" x2="970" y2="30.0" stroke="#2a2e38" stroke-dasharray="3,3"/><text x="42" y="34.0" fill="#888" font-size="11" text-anchor="end">100%</text><rect x="86.80000000000001" y="260.0" width="110.39999999999999" height="0.0" fill="#7cb7ff" rx="3"/><text x="142.0" y="254.0" fill="#e8e8e8" font-size="12" text-anchor="middle" font-weight="600">0%</text><text x="142.0" y="278" fill="#aab" font-size="12" text-anchor="middle">80+</text><text x="142.0" y="294" fill="#888" font-size="10" text-anchor="middle">n=2</text><text x="142.0" y="308" fill="#ff7878" font-size="11" text-anchor="middle">-1.02%</text><rect x="270.8" y="87.5" width="110.39999999999999" height="172.5" fill="#7cb7ff" rx="3"/><text x="326.0" y="81.5" fill="#e8e8e8" font-size="12" text-anchor="middle" font-weight="600">75%</text><text x="326.0" y="278" fill="#aab" font-size="12" text-anchor="middle">70-79</text><text x="326.0" y="294" fill="#888" font-size="10" text-anchor="middle">n=4</text><text x="326.0" y="308" fill="#7be07b" font-size="11" text-anchor="middle">+5.50%</text><rect x="454.8" y="30.0" width="110.39999999999999" height="230.0" fill="#7cb7ff" rx="3"/><text x="510.0" y="24.0" fill="#e8e8e8" font-size="12" text-anchor="middle" font-weight="600">100%</text><text x="510.0" y="278" fill="#aab" font-size="12" text-anchor="middle">60-69</text><text x="510.0" y="294" fill="#888" font-size="10" text-anchor="middle">n=7</text><text x="510.0" y="308" fill="#7be07b" font-size="11" text-anchor="middle">+5.00%</text><rect x="638.8" y="58.75" width="110.39999999999999" height="201.25" fill="#7cb7ff" rx="3"/><text x="694.0" y="52.75" fill="#e8e8e8" font-size="12" text-anchor="middle" font-weight="600">88%</text><text x="694.0" y="278" fill="#aab" font-size="12" text-anchor="middle">50-59</text><text x="694.0" y="294" fill="#888" font-size="10" text-anchor="middle">n=8</text><text x="694.0" y="308" fill="#7be07b" font-size="11" text-anchor="middle">+7.03%</text><rect x="822.8" y="30.0" width="110.39999999999999" height="230.0" fill="#7cb7ff" rx="3"/><text x="878.0" y="24.0" fill="#e8e8e8" font-size="12" text-anchor="middle" font-weight="600">100%</text><text x="878.0" y="278" fill="#aab" font-size="12" text-anchor="middle">40-49</text><text x="878.0" y="294" fill="#888" font-size="10" text-anchor="middle">n=2</text><text x="878.0" y="308" fill="#7be07b" font-size="11" text-anchor="middle">+9.88%</text><text x="50" y="18" fill="#aab" font-size="12">勝率 (%)　|　下方數字＝樣本數 / 平均漲幅</text></svg></div>
+  <div style="height:14px"></div>
+  
+<table>
+  <thead><tr><th>信心度區間</th><th style='text-align:right'>樣本</th><th style='text-align:right'>勝率</th><th style='text-align:right'>平均漲幅</th><th style='text-align:right'>漲停</th></tr></thead>
+  <tbody><tr><td>80+</td><td class='num'>2</td><td class='num'>0.0%</td><td class='num'><span class='neg'>-1.02%</span></td><td class='num'>0 (0%)</td></tr><tr><td>70-79</td><td class='num'>4</td><td class='num'>75.0%</td><td class='num'><span class='pos'>+5.50%</span></td><td class='num'>2 (50%)</td></tr><tr><td>60-69</td><td class='num'>7</td><td class='num'>100.0%</td><td class='num'><span class='pos'>+5.00%</span></td><td class='num'>1 (14%)</td></tr><tr><td>50-59</td><td class='num'>8</td><td class='num'>87.5%</td><td class='num'><span class='pos'>+7.03%</span></td><td class='num'>5 (62%)</td></tr><tr><td>40-49</td><td class='num'>2</td><td class='num'>100.0%</td><td class='num'><span class='pos'>+9.88%</span></td><td class='num'>2 (100%)</td></tr></tbody>
+</table>
+
+
+  <h2>依訊號類型</h2>
+  
+<table>
+  <thead><tr><th>訊號類型</th><th style='text-align:right'>樣本</th><th style='text-align:right'>勝率</th><th style='text-align:right'>平均漲幅</th><th style='text-align:right'>漲停</th></tr></thead>
+  <tbody><tr><td>mom</td><td class='num'>16</td><td class='num'>87.5%</td><td class='num'><span class='pos'>+5.65%</span></td><td class='num'>6 (38%)</td></tr><tr><td>both</td><td class='num'>6</td><td class='num'>66.7%</td><td class='num'><span class='pos'>+6.23%</span></td><td class='num'>4 (67%)</td></tr><tr><td>trend</td><td class='num'>1</td><td class='num'>100.0%</td><td class='num'><span class='pos'>+3.17%</span></td><td class='num'>0 (0%)</td></tr></tbody>
+</table>
+
+
+  <h2>依艙位 (Tier)</h2>
+  
+<table>
+  <thead><tr><th>艙位 (Tier)</th><th style='text-align:right'>樣本</th><th style='text-align:right'>勝率</th><th style='text-align:right'>平均漲幅</th><th style='text-align:right'>漲停</th></tr></thead>
+  <tbody><tr><td>A</td><td class='num'>22</td><td class='num'>81.8%</td><td class='num'><span class='pos'>+5.51%</span></td><td class='num'>9 (41%)</td></tr><tr><td>B</td><td class='num'>1</td><td class='num'>100.0%</td><td class='num'><span class='pos'>+9.82%</span></td><td class='num'>1 (100%)</td></tr></tbody>
+</table>
+
+
+  <h2>信心度 vs 隔日漲幅 散點圖</h2>
+  <div class='chart'><svg viewBox="0 0 1000 340" width="100%" style="display:block"><line x1="50" y1="280.0" x2="970" y2="280.0" stroke="#2a2e38" stroke-dasharray="3,3"/><text x="44" y="284.0" fill="#888" font-size="10" text-anchor="end">-2%</text><line x1="50" y1="240.0" x2="970" y2="240.0" stroke="#2a2e38" stroke-dasharray="3,3"/><text x="44" y="244.0" fill="#888" font-size="10" text-anchor="end">+0%</text><line x1="50" y1="200.0" x2="970" y2="200.0" stroke="#2a2e38" stroke-dasharray="3,3"/><text x="44" y="204.0" fill="#888" font-size="10" text-anchor="end">+2%</text><line x1="50" y1="160.0" x2="970" y2="160.0" stroke="#2a2e38" stroke-dasharray="3,3"/><text x="44" y="164.0" fill="#888" font-size="10" text-anchor="end">+4%</text><line x1="50" y1="120.0" x2="970" y2="120.0" stroke="#2a2e38" stroke-dasharray="3,3"/><text x="44" y="124.0" fill="#888" font-size="10" text-anchor="end">+6%</text><line x1="50" y1="80.0" x2="970" y2="80.0" stroke="#2a2e38" stroke-dasharray="3,3"/><text x="44" y="84.0" fill="#888" font-size="10" text-anchor="end">+8%</text><line x1="50" y1="40.0" x2="970" y2="40.0" stroke="#2a2e38" stroke-dasharray="3,3"/><text x="44" y="44.0" fill="#888" font-size="10" text-anchor="end">+10%</text><line x1="50" y1="240.0" x2="970" y2="240.0" stroke="#555"/><text x="181.42857142857142" y="316" fill="#aab" font-size="11" text-anchor="middle">40</text><text x="312.85714285714283" y="316" fill="#aab" font-size="11" text-anchor="middle">50</text><text x="444.2857142857143" y="316" fill="#aab" font-size="11" text-anchor="middle">60</text><text x="575.7142857142857" y="316" fill="#aab" font-size="11" text-anchor="middle">70</text><text x="707.1428571428571" y="316" fill="#aab" font-size="11" text-anchor="middle">80</text><text x="838.5714285714286" y="316" fill="#aab" font-size="11" text-anchor="middle">90</text><text x="970.0" y="316" fill="#aab" font-size="11" text-anchor="middle">100</text><text x="510.0" y="332" fill="#888" font-size="11" text-anchor="middle">信心度</text><circle cx="786.0" cy="277.8" r="4" fill="#7cb7ff" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>8046 南電 c=86 -1.89%</title></circle><circle cx="746.5714285714286" cy="243.0" r="4" fill="#7cb7ff" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>4540 全球傳動 c=83 -0.15%</title></circle><circle cx="615.1428571428572" cy="40.0" r="6" fill="#ff7878" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>2465 麗臺 c=73 +10.00%</title></circle><circle cx="602.0" cy="44.80000000000001" r="6" fill="#ff7878" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>1597 直得 c=72 +9.76%</title></circle><circle cx="602.0" cy="176.6" r="5" fill="#7be07b" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>3037 欣興 c=72 +3.17%</title></circle><circle cx="496.85714285714283" cy="116.6" r="5" fill="#7be07b" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>2233 宇隆 c=64 +6.17%</title></circle><circle cx="496.85714285714283" cy="42.80000000000001" r="6" fill="#ff7878" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>2417 圓剛 c=64 +9.86%</title></circle><circle cx="391.7142857142857" cy="43.60000000000002" r="6" fill="#ff7878" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>6405 悅城 c=56 +9.82%</title></circle><circle cx="181.42857142857142" cy="41.60000000000002" r="6" fill="#ff7878" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>3016 嘉晶 c=40 +9.92%</title></circle><circle cx="602.0" cy="259.0" r="4" fill="#7cb7ff" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>3711 日月光投控 c=72 -0.95%</title></circle><circle cx="549.4285714285713" cy="232.4" r="5" fill="#7be07b" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>2395 研華 c=68 +0.38%</title></circle><circle cx="536.2857142857142" cy="110.60000000000002" r="5" fill="#7be07b" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>2449 京元電子 c=67 +6.47%</title></circle><circle cx="523.1428571428571" cy="143.6" r="5" fill="#7be07b" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>3135 統旭-KY c=66 +4.82%</title></circle><circle cx="510.0" cy="157.4" r="5" fill="#7be07b" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>2855 統一證 c=65 +4.13%</title></circle><circle cx="483.7142857142857" cy="176.2" r="5" fill="#7be07b" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>3535 晶彩科 c=63 +3.19%</title></circle><circle cx="418.0" cy="40.799999999999955" r="6" fill="#ff7878" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>3030 德律 c=58 +9.96%</title></circle><circle cx="418.0" cy="41.80000000000001" r="6" fill="#ff7878" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>6706 惠特 c=58 +9.91%</title></circle><circle cx="404.8571428571429" cy="248.0" r="4" fill="#7cb7ff" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>2345 智邦 c=57 -0.40%</title></circle><circle cx="352.2857142857143" cy="40.599999999999966" r="6" fill="#ff7878" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>2342 茂矽 c=53 +9.97%</title></circle><circle cx="352.2857142857143" cy="228.0" r="5" fill="#7be07b" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>6695 芯鼎 c=53 +0.60%</title></circle><circle cx="352.2857142857143" cy="43.0" r="6" fill="#ff7878" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>2417 圓剛 c=53 +9.85%</title></circle><circle cx="312.85714285714283" cy="108.80000000000004" r="5" fill="#7be07b" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>6197 佳必琪 c=50 +6.56%</title></circle><circle cx="299.71428571428567" cy="43.19999999999999" r="6" fill="#ff7878" fill-opacity="0.7" stroke="#0f1115" stroke-width="1"><title>1597 直得 c=49 +9.84%</title></circle><line x1="50.0" y1="-10.196737741967183" x2="970.0" y2="281.5994693917657" stroke="#ffb84d" stroke-width="2" stroke-dasharray="6,4" opacity="0.8"/><text x="962" y="34" fill="#ffb84d" font-size="11" text-anchor="end">回歸斜率 -0.208 %/分</text></svg><div style="font-size:11px;color:#888;margin-top:6px">🔴 漲停　🟢 上漲　🔵 下跌或持平　🟧 線性回歸</div></div>
+
+  <h2>每日平均漲幅時序</h2>
+  <div class='chart'><svg viewBox="0 0 1000 260" width="100%" style="display:block"><line x1="50" y1="200.5741420246061" x2="970" y2="200.5741420246061" stroke="#2a2e38" stroke-dasharray="3,3"/><text x="44" y="204.5741420246061" fill="#888" font-size="10" text-anchor="end">-2%</text><line x1="50" y1="161.72242607381827" x2="970" y2="161.72242607381827" stroke="#2a2e38" stroke-dasharray="3,3"/><text x="44" y="165.72242607381827" fill="#888" font-size="10" text-anchor="end">+0%</text><line x1="50" y1="122.87071012303043" x2="970" y2="122.87071012303043" stroke="#2a2e38" stroke-dasharray="3,3"/><text x="44" y="126.87071012303043" fill="#888" font-size="10" text-anchor="end">+2%</text><line x1="50" y1="84.01899417224263" x2="970" y2="84.01899417224263" stroke="#2a2e38" stroke-dasharray="3,3"/><text x="44" y="88.01899417224263" fill="#888" font-size="10" text-anchor="end">+4%</text><line x1="50" y1="45.16727822145478" x2="970" y2="45.16727822145478" stroke="#2a2e38" stroke-dasharray="3,3"/><text x="44" y="49.16727822145478" fill="#888" font-size="10" text-anchor="end">+6%</text><line x1="50" y1="161.72242607381827" x2="970" y2="161.72242607381827" stroke="#555"/><polyline points="50.0,39.4 970.0,58.6" fill="none" stroke="#7cb7ff" stroke-width="2"/><circle cx="50.0" cy="39.42585797539391" r="5" fill="#7be07b" stroke="#0f1115" stroke-width="1.5"><title>2026-04-30 平均 +6.30% (n=9)</title></circle><text x="50.0" y="236" fill="#aab" font-size="11" text-anchor="middle">04-30</text><text x="50.0" y="29.42585797539391" fill="#7be07b" font-size="11" text-anchor="middle" font-weight="600">+6.30%</text><circle cx="970.0" cy="58.58499583731617" r="5" fill="#7be07b" stroke="#0f1115" stroke-width="1.5"><title>2026-05-04 平均 +5.31% (n=14)</title></circle><text x="970.0" y="236" fill="#aab" font-size="11" text-anchor="middle">05-04</text><text x="970.0" y="48.58499583731617" fill="#7be07b" font-size="11" text-anchor="middle" font-weight="600">+5.31%</text></svg></div>
+
+  <div class="footer">最後更新：2026-05-05 14:47　|　資料來源：daily_results.csv　|　⚠️ 規則篩選結果，非投資建議</div>
+</div>
+</body></html>
